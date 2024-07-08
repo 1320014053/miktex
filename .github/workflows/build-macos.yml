@@ -8,7 +8,7 @@ jobs:
       - name: Checkout MiKTeX 24.4
         uses: actions/checkout@v3
         with:
-          repository: 'MiKTeX/miktex' 
+          repository: '1320014053/miktex' 
           ref: '24.4' 
           path: 'miktex' 
 
