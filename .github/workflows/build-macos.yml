@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: '1320014053/miktex' 
-          ref: '24.4' 
+          ref: '123' 
           path: 'miktex' 
 
       - name: Install dependencies
