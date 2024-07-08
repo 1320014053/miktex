@@ -19,6 +19,7 @@ jobs:
           brew install cmake # 安装 cmake 
           brew install pkg-config
           brew install icu4c
+          brew install binutils
           brew install freetype
           brew install cairo
           brew install fribidi
