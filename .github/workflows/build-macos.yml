@@ -48,7 +48,7 @@ jobs:
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
-          make -j
+          make
           make package
 
       # 可选: 上传构建结果
