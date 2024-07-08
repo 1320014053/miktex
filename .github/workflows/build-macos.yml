@@ -21,6 +21,7 @@ jobs:
           brew install fribidi
           brew install gmp
           brew install graphite2
+          brew install boost
           brew install hunspell
           brew install jpeg
           brew install libpng
