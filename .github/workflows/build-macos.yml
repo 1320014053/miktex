@@ -1,0 +1,57 @@
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout MiKTeX 24.4
+        uses: actions/checkout@v3
+        with:
+          repository: 'MiKTeX/miktex' 
+          ref: '24.4' 
+          path: 'miktex' 
+
+      - name: Install dependencies
+        run: |
+          brew install cmake # 安装 cmake 
+          brew install pkg-config
+          brew install icu4c
+          brew install freetype
+          brew install fribidi
+          brew install gmp
+          brew install graphite2
+          brew install hunspell
+          brew install jpeg
+          brew install libpng
+          brew install libtiff
+          brew install libzzip
+          brew install log4cxx
+          brew install mpfr
+          brew install openssl
+          brew install pixman
+          brew install popt
+          brew install potrace
+          brew install qt
+          brew install uriparser
+          brew install xz
+          # 根据 MiKTeX 24.4 文档安装其他必要依赖 
+
+      - name: Configure and Build 
+        run: |
+          mkdir miktex/build
+          cd miktex/build
+          brewprefix="`brew --prefix`"
+          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
+          cmake ..
+          make -j
+          make package
+
+      # 可选: 上传构建结果
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: miktex-build
+          path: miktex/build/ # 上传 build 目录下的所有文件
