@@ -3,7 +3,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
       - name: Checkout MiKTeX 24.4
         uses: actions/checkout@v3
