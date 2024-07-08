@@ -34,6 +34,7 @@ jobs:
           brew install popt
           brew install potrace
           brew install qt
+          brew install mpfi
           brew install uriparser
           brew install xz
           # 根据 MiKTeX 24.4 文档安装其他必要依赖 
