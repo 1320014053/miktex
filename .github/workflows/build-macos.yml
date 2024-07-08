@@ -18,6 +18,7 @@ jobs:
           brew install pkg-config
           brew install icu4c
           brew install freetype
+          brew install cairo
           brew install fribidi
           brew install gmp
           brew install graphite2
