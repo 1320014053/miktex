@@ -22,7 +22,7 @@ set(CMAKE_LINK_DEPENDS_NO_SHARED 1)
 
 if(APPLE)
     set(CMAKE_OSX_DEPLOYMENT_TARGET
-        "10.14"
+        "10.15"
         CACHE STRING
         "The earliest version of MacOS X that MiKTeX will run on."
     )
@@ -109,10 +109,10 @@ if(MIKTEX_NATIVE_WINDOWS)
         set(MIKTEX_MANIFEST_PROCESSOR_ARCHITECTURE "amd64")
     else()
         set(system_cpu "x86")
-        set(MIKTEX_MANIFEST_PROCESSOR_ARCHITECTURE "x86")
+        set(MIKTEX_MANIFEST_PROCESSOR_ARCHITECTURE "amd64")
     endif()
 elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "i.86")
-    set(system_cpu "x86")
+    set(system_cpu "amd64")
 else()
     string(TOLOWER "${CMAKE_SYSTEM_PROCESSOR}" system_cpu)
 endif()
