@@ -140,11 +140,11 @@ string(SUBSTRING ${CMAKE_INSTALL_PREFIX} 0 17 homebrew_cellar)
 if(homebrew_cellar STREQUAL "/usr/local/Cellar")
     set(MIKTEX_HOMEBREW TRUE)
 endif()
-set(MIKTEX_MACOS_BUNDLE FALSE)
+
 if(APPLE AND NOT MIKTEX_HOMEBREW)
     set(MIKTEX_MACOS_BUNDLE TRUE)
 endif()
-
+set(MIKTEX_MACOS_BUNDLE FALSE)
 ###############################################################################
 ## handle install prefix standards
 
