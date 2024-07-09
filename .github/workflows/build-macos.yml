@@ -48,7 +48,6 @@ jobs:
         run: |
           mkdir miktex/build
           cd miktex/build
-          ls /usr/local/opt/qt/include/
           ls /usr/local/opt/qt/include/QtGui
           brewprefix="`brew --prefix`"
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${CMAKE_PREFIX_PATH}"
