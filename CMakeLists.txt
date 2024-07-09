@@ -209,7 +209,7 @@ option(
 )
 
 if(MIKTEX_MACOS_BUNDLE)
-    set(use_system_cairo_default TRUE)
+    set(use_system_cairo_default FALSE)
 elseif(MIKTEX_UNIX_ALIKE)
     set(use_system_cairo_default TRUE)
 endif()
