@@ -8,7 +8,7 @@
 
 #cmakedefine CAIRO_HAS_PTHREAD 1
 
-#cmakedefine HAVE_CTIME_R 0
+#cmakedefine HAVE_CTIME_R 1
 
 #cmakedefine HAVE_FCNTL_H 1
 
