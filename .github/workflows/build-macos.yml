@@ -38,6 +38,7 @@ jobs:
           brew install popt
           brew install potrace
           brew install qt
+          brew install poppler-qt5
           brew install mpfi
           brew install uriparser
           brew install xz
