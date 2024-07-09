@@ -209,7 +209,7 @@ option(
 )
 
 if(MIKTEX_MACOS_BUNDLE)
-    set(use_system_cairo_default FALSE)
+    set(use_system_cairo_default TRUE)
 elseif(MIKTEX_UNIX_ALIKE)
     set(use_system_cairo_default TRUE)
 endif()
@@ -1680,7 +1680,7 @@ else()
     add_subdirectory(${MIKTEX_REL_PNG_DIR})
 endif()
 
-if(TRUE)
+if(USE_SYSTEM_CAIRO)
     get_filename_component(suffix ${CAIRO_LIBRARY} EXT)
     if (suffix STREQUAL CMAKE_SHARED_LIBRARY_SUFFIX)
         add_library(MiKTeX::Imported::CAIRO SHARED IMPORTED)
