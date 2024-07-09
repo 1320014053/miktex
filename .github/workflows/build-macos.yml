@@ -52,7 +52,6 @@ jobs:
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
           make -j
-          make package
 
       # 可选: 上传构建结果
       - name: Upload artifact
