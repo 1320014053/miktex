@@ -6,6 +6,8 @@
 
 #cmakedefine HAVE_D2D1_3_H 1
 
+#cmakedefine CAIRO_HAS_PTHREAD 1
+
 #cmakedefine HAVE_FCNTL_H 1
 
 #cmakedefine HAVE_FECLEAREXCEPT 1
