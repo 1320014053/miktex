@@ -51,7 +51,7 @@ jobs:
           ls /usr/local/opt/qt/include/
           ls /usr/local/opt/qt/include/QtGui
           brewprefix="`brew --prefix`"
-          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:$(brew --prefix qt):${CMAKE_PREFIX_PATH}"
+          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
           make package
