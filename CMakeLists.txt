@@ -144,7 +144,6 @@ endif()
 if(APPLE AND NOT MIKTEX_HOMEBREW)
     set(MIKTEX_MACOS_BUNDLE TRUE)
 endif()
-set(MIKTEX_MACOS_BUNDLE FALSE)
 ###############################################################################
 ## handle install prefix standards
 
@@ -356,7 +355,7 @@ option(
 if(MIKTEX_HOMEBREW OR MIKTEX_MACOS_BUNDLE)
     set(use_system_mspack_default FALSE)
 elseif(MIKTEX_UNIX_ALIKE)
-    set(use_system_mspack_default FALSE)
+    set(use_system_mspack_default TRUE)
 endif()
 
 option(
@@ -1681,7 +1680,7 @@ else()
     add_subdirectory(${MIKTEX_REL_PNG_DIR})
 endif()
 
-if(USE_SYSTEM_CAIRO)
+if(TRUE)
     get_filename_component(suffix ${CAIRO_LIBRARY} EXT)
     if (suffix STREQUAL CMAKE_SHARED_LIBRARY_SUFFIX)
         add_library(MiKTeX::Imported::CAIRO SHARED IMPORTED)
