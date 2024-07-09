@@ -21,7 +21,6 @@ jobs:
           brew install icu4c
           brew install binutils
           brew install freetype
-          brew install libmspack
           brew install cairo
           brew install fribidi
           brew install gmp
@@ -49,7 +48,7 @@ jobs:
           mkdir miktex/build
           cd miktex/build
           brewprefix="`brew --prefix`"
-          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/libmspack:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
+          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
           make
