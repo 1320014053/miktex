@@ -194,7 +194,7 @@
 #elif CAIRO_HAS_PTHREAD /* and finally if there are no native mutexes ********/
 
 # include <pthread.h>
-#error CAIRO_HAS_PTHREAD
+#error "123123123123123123"
   typedef pthread_mutex_t cairo_mutex_impl_t;
   typedef pthread_mutex_t cairo_recursive_mutex_impl_t;
 
