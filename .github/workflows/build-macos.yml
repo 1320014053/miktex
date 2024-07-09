@@ -37,7 +37,7 @@ jobs:
           brew install pixman
           brew install popt
           brew install potrace
-          brew install qt@5.11
+          brew install qt@5.15
           brew install poppler-qt5
           brew install mpfi
           brew install uriparser
