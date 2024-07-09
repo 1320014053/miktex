@@ -37,7 +37,7 @@
  *	Mathias Hasselmann <mathias.hasselmann@gmx.de>
  *	Behdad Esfahbod <behdad@behdad.org>
  */
-
+#error "123123123123: " CAIRO_HAS_PTHREAD
 #ifndef CAIRO_MUTEX_IMPL_PRIVATE_H
 #define CAIRO_MUTEX_IMPL_PRIVATE_H
 
