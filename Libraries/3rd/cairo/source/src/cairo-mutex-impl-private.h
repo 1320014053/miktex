@@ -37,7 +37,7 @@
  *	Mathias Hasselmann <mathias.hasselmann@gmx.de>
  *	Behdad Esfahbod <behdad@behdad.org>
  */
-#error "123123123123: " CAIRO_HAS_PTHREAD
+
 #ifndef CAIRO_MUTEX_IMPL_PRIVATE_H
 #define CAIRO_MUTEX_IMPL_PRIVATE_H
 
@@ -194,7 +194,7 @@
 #elif CAIRO_HAS_PTHREAD /* and finally if there are no native mutexes ********/
 
 # include <pthread.h>
-
+#error CAIRO_HAS_PTHREAD
   typedef pthread_mutex_t cairo_mutex_impl_t;
   typedef pthread_mutex_t cairo_recursive_mutex_impl_t;
 
