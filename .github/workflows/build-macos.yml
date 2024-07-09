@@ -48,7 +48,7 @@ jobs:
         run: |
           mkdir miktex/build
           cd miktex/build
-          ls -all /usr/local/opt/qt/include/QtGui
+          ls -all /usr/local/opt/qt/include/lib
           brewprefix="`brew --prefix`"
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt/include/lib/QtCore:${brewprefix}/opt/qt/include/lib/QtGui:${brewprefix}/opt/qt/include/lib/QtDBus:${brewprefix}/opt/qt/include/lib:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
