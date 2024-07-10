@@ -53,7 +53,7 @@ jobs:
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt/lib:${brewprefix}/opt/qt/Frameworks:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
-          #make package
+          make package
 
       # 可选: 上传构建结果
       - name: Upload artifact
