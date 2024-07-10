@@ -61,4 +61,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: miktex-build
-          path: miktex/build/ # 上传 build 目录下的所有文件
+          path: |
+            miktex/build/ # 上传 build 目录下的所有文件
+            /usr/local/opt/qt/
