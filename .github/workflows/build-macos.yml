@@ -50,7 +50,7 @@ jobs:
           cd miktex/build
           ls -all /usr/local/opt/qt/lib
           brewprefix="`brew --prefix`"
-          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt/lib:${brewprefix}/opt/qt/Frameworks:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
+          export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt/Frameworks:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
           make package
@@ -63,4 +63,4 @@ jobs:
           name: miktex-build
           path: |
             miktex/build/ # 上传 build 目录下的所有文件
-            /usr/local/opt/qt/
+            #/usr/local/opt/qt/
