@@ -1,0 +1,51 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - name: Checkout MiKTeX 24.4
+        uses: actions/checkout@v3
+        with:
+          repository: '1320014053/miktex' 
+          ref: '123' 
+          path: 'miktex' 
+
+      - name: Install dependencies
+        run: |
+          brew update
+          brew upgrade
+          brew install cmake # 安装 cmake 
+          brew install pkg-config
+          brew install icu4c
+          brew install binutils
+          brew install freetype
+          brew install cairo
+          brew install fribidi
+          brew install gmp
+          brew install graphite2
+          brew install boost
+          brew install hunspell
+          brew install jpeg
+          brew install libpng
+          brew install libtiff
+          brew install libzzip
+          brew install log4cxx
+          brew install mpfr
+          brew install openssl
+          brew install pixman
+          brew install popt
+          brew install potrace
+          brew install qt
+          brew install poppler-qt5
+          brew install mpfi
+          brew install uriparser
+          brew install xz
+          # 根据 MiKTeX 24.4 文档安装其他必要依赖 
+
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        with:
+          ## limits ssh access and adds the ssh public key for the user which triggered the workflow
+          limit-access-to-actor: true
