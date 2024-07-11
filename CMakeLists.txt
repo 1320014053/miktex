@@ -1121,6 +1121,7 @@ if(WITH_UI_QT)
             DBus
         )
     endif()
+    message("123123123123")
     find_package(Qt${QT_SERIES} REQUIRED ${required_qt_components})
 endif()
 
