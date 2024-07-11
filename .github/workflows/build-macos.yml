@@ -52,7 +52,7 @@ jobs:
           brewprefix="`brew --prefix`"
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt/Frameworks:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
-          cmake .. --log-level=TRACE
+          cmake .. --log-level=DEBUG
           make package
 
       # 可选: 上传构建结果
