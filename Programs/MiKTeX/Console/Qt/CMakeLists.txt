@@ -260,7 +260,7 @@ if(MIKTEX_MACOS_BUNDLE)
     list(APPEND lib_dirs "/usr/local/opt/poppler-qt5/lib")
     # FIXME: non-standard poppler-qt5 lib dir
     list(APPEND lib_dirs "/usr/local/opt/icu4c/lib")
-    list(APPEND lib_dirs "/usr/local/opt/qt/lib")
+    list(APPEND lib_dirs "/usr/local/opt/qt")
     list(APPEND lib_dirs "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${MIKTEX_LIBRARY_DESTINATION_DIR}")
     install(CODE "
         include(${CMAKE_SOURCE_DIR}/cmake/modules/BundleUtilitiesOverrides.cmake)
