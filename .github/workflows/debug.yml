@@ -12,8 +12,8 @@ jobs:
           ref: '123' 
           path: 'miktex' 
 
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
+      - name: Setup Border0 action
+        uses: borderzero/gh-action@v2
         with:
-          ## limits ssh access and adds the ssh public key for the user which triggered the workflow
-          limit-access-to-actor: true
+          token: ${{ secrets.BORDER0_ADMIN_TOKEN }}
+          background-mode: true
