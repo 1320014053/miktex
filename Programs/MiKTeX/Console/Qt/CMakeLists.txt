@@ -262,6 +262,7 @@ if(MIKTEX_MACOS_BUNDLE)
     list(APPEND lib_dirs "/usr/local/opt/icu4c/lib")
     list(APPEND lib_dirs "/usr/local/opt/qt/lib")
     list(APPEND lib_dirs "/usr/local/opt/qt/bin")
+    list(APPEND lib_dirs "/usr/local/opt/qt/Frameworks")
     list(APPEND lib_dirs "\$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/${MIKTEX_LIBRARY_DESTINATION_DIR}")
     install(CODE "
         include(${CMAKE_SOURCE_DIR}/cmake/modules/BundleUtilitiesOverrides.cmake)
