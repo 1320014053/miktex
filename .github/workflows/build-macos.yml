@@ -48,7 +48,7 @@ jobs:
         run: |
           mkdir miktex/build
           cd miktex/build
-          ls -all /usr/local/opt/qt/lib
+          ls -all /usr/local/opt/
           brewprefix="`brew --prefix`"
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${brewprefix}/opt/qt:${CMAKE_PREFIX_PATH}"
           export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
@@ -61,6 +61,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: miktex-build
-          path: |
-            miktex/build/ # 上传 build 目录下的所有文件
-            #/usr/local/opt/qt/
+          path: miktex/build/ # 上传 build 目录下的所有文件
