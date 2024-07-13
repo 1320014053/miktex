@@ -2328,7 +2328,7 @@ if(WITH_BOOTSTRAPPING)
     if(DEFINED ENV{MIKTEX_REPOSITORY})
         set(default_repository $ENV{MIKTEX_REPOSITORY})
     else()
-        set(default_repository "http://ctan.org/tex-archive/systems/win32/miktex/tm/packages/")
+        set(default_repository "https://ctan.org/tex-archive/systems/win32/miktex/tm/packages/")
     endif()
     set(MIKTEX_DEFAULT_REPOSITORY
         ${default_repository}
