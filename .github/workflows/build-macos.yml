@@ -51,7 +51,6 @@ jobs:
           ls -all /usr/local/opt
           brewprefix="`brew --prefix`"
           export CMAKE_PREFIX_PATH="${brewprefix}/opt/icu4c:${brewprefix}/opt/openssl:${brewprefix}/opt/icu4c:${CMAKE_PREFIX_PATH}"
-          export CURL_CA_BUNDLE="/etc/ssl/cert.pem"
           cmake ..
           make package
 
