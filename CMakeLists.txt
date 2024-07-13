@@ -1457,6 +1457,7 @@ elseif(MIKTEX_RELEASE_STATE EQUAL 4)
 endif()
 
 mark_as_advanced(CMAKE_BUILD_TYPE)
+message("123123123123${CMAKE_BUILD_TYPE}")
 
 ###############################################################################
 ## add global definitions
